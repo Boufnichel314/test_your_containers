@@ -1,4 +1,4 @@
-package com.test.containers_testing;
+package com.containers_testing;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

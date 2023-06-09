@@ -1,5 +1,6 @@
-package com.test.containers_testing;
+package com.containers_testing;
 
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
@@ -10,7 +11,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @Testcontainers
-public class TestContainer {
+public abstract class TestContainer {
 
 
     @Container
@@ -30,8 +31,8 @@ public class TestContainer {
 
     @Test
     void isMysqlDbStarting() {
-        assertThat(mySqlContainer.isCreated()).isTrue();
-        assertThat(mySqlContainer.isRunning()).isTrue();
+        Assertions.assertThat(mySqlContainer.isCreated()).isTrue();
+        Assertions.assertThat(mySqlContainer.isRunning()).isTrue();
     }
 
 
